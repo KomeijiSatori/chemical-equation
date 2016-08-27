@@ -362,7 +362,8 @@ int getRank(fraction matrix[][MAX], int row, int col)
 			fraction temp = matrix[r][j] / matrix[i][j];
 			for (int c = j; c <= col - 1; c++)
 			{
-				matrix[r][c] = matrix[r][c] - temp * matrix[i][c];
+				fraction ls = temp * matrix[i][c];
+				matrix[r][c] = matrix[r][c] - ls;
 			}
 		}
 	}
@@ -438,7 +439,8 @@ void deal(item *sub, int cnt)//cnt is the number of the substance
 			fraction temp;
 			for (int j = col - 1; j >= i + 1; j--)
 			{
-				temp = temp + matrix[i][j] * sub[j].count;
+				fraction ls = matrix[i][j] * sub[j].count;
+				temp = temp + ls;
 			}
 			sub[i].count = temp / matrix[i][i];
 			sub[i].count.denominator = -sub[i].count.denominator;
