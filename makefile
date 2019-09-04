@@ -11,13 +11,13 @@ fraction.o : fraction.cpp fraction.h
 		g++ -g -c fraction.cpp
 
 helper.o : helper.cpp helper.h fraction.h substance.h
-		g++ -g -c helper.cpp
+		g++ -g -c helper.cpp -std=c++11
 
 format.o : format.cpp format.h substance.h
 		g++ -g -c format.cpp
 
 main.o : main.cpp substance.o
-		g++ -g -c main.cpp
+		g++ -g -c main.cpp -std=c++11
 
 clean :
 		rm main.o substance.o utils.o fraction.o helper.o format.o

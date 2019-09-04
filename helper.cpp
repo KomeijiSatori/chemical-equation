@@ -4,7 +4,7 @@
 #include "utils.h"
 #include "substance.h"
 
-SolveResult solve(vector<vector<Fraction>> &matrix, vector<int> &res)
+SolveResult solve(vector<vector<Fraction> > &matrix, vector<int> &res)
 {
     int m = matrix.size();
     if (m == 0) return SolveResult::NOANSWER;
@@ -132,7 +132,7 @@ SolveResult getElementCnt(vector<Substance> &reactant, vector<Substance> &result
     }
     int m = elements.size();
     // generate matrix
-    vector<vector<Fraction>> matrix;
+    vector<vector<Fraction> > matrix;
     for (set<string>::iterator itr = elements.begin(); itr != elements.end(); ++itr)
     {
         string eleName = *itr;

@@ -12,7 +12,7 @@ class Substance
         string name;
         map<string, int> elements;
         bool getElementsByName(string &);
-        bool adjustStack(stack<pair<string, int>> &, int);
+        bool adjustStack(stack<pair<string, int> > &, int);
     public:
         Substance(string name);
         Substance(const Substance &a);

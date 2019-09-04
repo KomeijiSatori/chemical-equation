@@ -2,7 +2,7 @@
 #include <stack>
 using namespace std;
 
-bool Substance::adjustStack(stack<pair<string, int>> &st, int times)
+bool Substance::adjustStack(stack<pair<string, int> > &st, int times)
 {
     if (st.empty())
     {
@@ -11,7 +11,7 @@ bool Substance::adjustStack(stack<pair<string, int>> &st, int times)
     string curStr = st.top().first;
     st.pop();
     string startStr = "";
-    stack<pair<string, int>> tmp;
+    stack<pair<string, int> > tmp;
     if (curStr == ")")
     {
         startStr = "(";
@@ -63,7 +63,7 @@ bool Substance::getElementsByName(string &_name)
     string curEle = "";
     int curCnt = 0;
     // stack of elements and its count, if count is -1, means it is not an element, is one of "()[]"
-    stack<pair<string, int>> st;
+    stack<pair<string, int> > st;
 
     for (int i = 0; i < _name.length(); i++)
     {
